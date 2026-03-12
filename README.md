@@ -10,6 +10,7 @@ API REST sviluppata con Spring Boot per tenere traccia delle candidature di lavo
 - Spring Data JPA + Hibernate
 - MySQL
 - Springdoc OpenAPI (Swagger UI)
+- Docker
 
 ## Funzionalità
 
@@ -24,12 +25,24 @@ API REST sviluppata con Spring Boot per tenere traccia delle candidature di lavo
 
 ### Prerequisiti
 
-- Java 21
-- Maven
-- MySQL
+- Java 21 (solo senza Docker)
+- Maven (solo senza Docker)
+- MySQL (solo senza Docker)
+- Docker (consigliato)
 
 ### Configurazione
+## Docker
 
+Avvia l'applicazione e il database con un comando solo:
+```bash
+docker-compose up --build
+```
+
+L'app sarà disponibile su `http://localhost:8080/swagger-ui/index.html`
+
+> Il database MySQL viene creato automaticamente, non è necessaria nessuna configurazione manuale.
+
+## Senza Docker
 1. Clona il repository:
    ```bash
    git clone https://github.com/DeakTm/job-application-tracker-api.git
